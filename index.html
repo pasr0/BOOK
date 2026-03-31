@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .visibility-banner {
+      background: #2d6a4f;
+      color: #d8f3dc;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+    }
+
+    .visibility-banner strong {
+      color: #b7e4c7;
+    }
+
+    .visibility-banner a {
+      color: #95d5b2;
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 16px 24px;
+      background: #16213e;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    header a {
+      color: #e94560;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid #e94560;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    header a:hover {
+      background: #e94560;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pdf-container {
+      flex: 1;
+      width: 100%;
+    }
+
+    object {
+      width: 100%;
+      height: calc(100vh - 96px);
+      display: block;
+      border: none;
+    }
+
+    .fallback {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .fallback p {
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+
+    .fallback a {
+      color: #e94560;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    Ce document est public : toute personne disposant de ce lien peut le consulter et le télécharger.
+    Pour restreindre l'accès, rends le dépôt privé ou désactive GitHub Pages.
+    Voir README.md pour plus de détails.
+  -->
+  <div class="visibility-banner">
+    🌐 <strong>Document public</strong> — Ce PDF est accessible à toute personne disposant du lien.
+    <a href="https://github.com/pasr0/BOOK#-accessibilit%C3%A9-du-pdf---%C3%A0-lire-avant-duploader" target="_blank" rel="noopener noreferrer">En savoir plus sur la visibilité</a>
+  </div>
+
+  <header>
+    <h1>Portfolio</h1>
+    <a href="portfolio.pdf" download>Télécharger</a>
+  </header>
+
+  <main>
+    <div class="pdf-container">
+      <object data="portfolio.pdf" type="application/pdf">
+        <div class="fallback">
+          <p>Votre navigateur ne peut pas afficher le PDF directement.</p>
+          <a href="portfolio.pdf">Cliquez ici pour ouvrir ou télécharger le PDF</a>
+        </div>
+      </object>
+    </div>
+  </main>
+</body>
+</html>
